@@ -32,7 +32,7 @@ model.add(Dense(256,activation='relu'))
 model.add(Dense(10,activation='softmax'))
 model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
 model.load_weights(name)
-frame=cv2.imread('1.jpg')
+frame=cv2.imread('cat.jpg')
 
 roi=frame
 x1=20
@@ -61,7 +61,6 @@ cv2.putText(frame, text, (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255))
 
     # Display the resulting frame
 cv2.imshow('frame',frame)
-cv2.imwrite('aankit.jpg',frame)
 # When everything done, release the capture
 cv2.waitKey(0)
 cv2.destroyAllWindows()
